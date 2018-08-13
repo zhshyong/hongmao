@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hongmao.dao.game.GameDao">
+    <resultMap id="BaseResultMap" type="com.hongmao.dto.game.GameDto">
+        <id column="id" property="id"/>
+        <id column="gameA" property="gameA"/>
+        <id column="createTime" property="createTime"/>
+        <id column="updateTime" property="updateTime"/>
+        <id column="gameB" property="gameB"/>
+        <id column="oddsA" property="oddsA"/>
+        <id column="oddsB" property="oddsB"/>
+        <id column="flag" property="flag"/>
+        <id column="status" property="status"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+	    id,gameA,createTime,updateTime,gameB,oddsA,oddsB,flag,status
+    </sql>
+
+    <select id="findShowGame" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM td_game
+        WHERE flag = 1 and status <![CDATA[!=]]> 3
+    </select>
+
+</mapper>

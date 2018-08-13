@@ -4,7 +4,7 @@ import java.util.Map;
 
 /**
  * User服务接口
- * @author zhsha
+ * @author
  * @version
  */
 public interface UserService {

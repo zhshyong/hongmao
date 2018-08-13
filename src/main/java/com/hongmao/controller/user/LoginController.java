@@ -18,10 +18,9 @@ import java.util.Map;
 
 /**
  * 登陆Controller
- * @author zhsha
+ * @author
  * @version
  */
-@RequestMapping("/hongmao")
 @Controller
 public class LoginController {
 

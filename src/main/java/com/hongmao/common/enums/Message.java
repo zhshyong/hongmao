@@ -2,7 +2,7 @@ package com.hongmao.common.enums;
 
 /**
  *提示消息枚举类
- * @author zhsha
+ * @author
  * @version
  */
 public enum Message {

@@ -6,7 +6,7 @@ import java.security.MessageDigest;
 
 /**
  *加密类
- * @author zhsha
+ * @author
  * @version
  */
 public class MD5Utils {

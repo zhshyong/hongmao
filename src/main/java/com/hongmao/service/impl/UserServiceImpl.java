@@ -15,7 +15,7 @@ import java.util.Map;
 
 /**
  *
- * @author zhsha
+ * @author
  * @version
  */
 @Service("userService")
@@ -28,9 +28,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Map<String, String> loginUser(String userName, String passWord) {
+        Map<String, String> resultMap = new HashMap<>();
         //查询出用户信息
         UserDto userDto = userDao.queryUserInfoByUserName(userName);
-        Map<String, String> resultMap = new HashMap<>();
+        if (null == userDto) {
+            resultMap.put("code", Message.LOGIN_FAILURE.getCode());
+            resultMap.put("msg", "用户不存在");
+            return resultMap;
+        }
         String newPassWord = MD5Utils.getMD5ecode(passWord);
         logger.debug("newPassWord-----------" + newPassWord);
         logger.debug("userDto:-------" + userDto);

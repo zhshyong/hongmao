@@ -4,7 +4,7 @@ import com.hongmao.dto.user.UserDto;
 
 /**
  * 操作用户
- * @author zhsha
+ * @author
  * @version
  */
 public interface UserDao {
