@@ -1,4 +1,19 @@
 $(function(){
+
+    showGame();
+    function showGame(){
+        $.ajax({
+            url: "/hongmao/getGameList.do",
+            type: "GET",
+            dataType : 'json',
+            success: function (result) {
+                console.log(result);
+            },
+            error : function() {
+            }
+        });
+    };
+
     $('#submitLogin')
         .on('click', function bindEventFunc() {
             console.log(1);

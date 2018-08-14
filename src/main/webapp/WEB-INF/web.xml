@@ -45,5 +45,8 @@
   <listener>
     <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
   </listener>
-
+  <!--session过期时间30分钟-->
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
 </web-app>
