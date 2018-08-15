@@ -3,6 +3,11 @@
 <script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
 <link  rel="stylesheet" href="static/bootstrap/css/bootstrap.css"/>
 <script type="text/javascript" src="js/index.js"></script>
+<style>
+   .span4{
+       width: 100%;
+   }
+</style>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
@@ -30,26 +35,23 @@
         <h1>红猫</h1>
         <p>欢迎来到红猫！</p>
     </div>
-
-    <!-- Example row of columns -->
-    <div class="row">
-        <div class="span4">
-            <h2>Heading</h2>
-            <p></p>
-            <p><a href="#betLet" role="button" class="btn" data-toggle="modal"></a></p>
-        </div>
-        <div class="span4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn" href="#">View details »</a></p>
-        </div>
-        <div class="span4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn" href="#">View details »</a></p>
-        </div>
+    <div id="context">
+        <!-- Example row of columns -->
+        <#--<div class="row">-->
+            <#--<div class="span4">-->
+                <#--<h1>Heading</h1>-->
+                <#--<h1>SSW VS SSN</h1>-->
+                <#--<h2>-->
+                    <#--<a href="#betLet" role="button" class="btn" data-toggle="modal" style="width: 300px;height: 50px;">-->
+                        <#--<span style="line-height: 50px;">SSW</span>-->
+                    <#--</a>-->
+                    <#--<a href="#betLet" role="button" class="btn" data-toggle="modal" style="width: 300px;height: 50px; margin-left: 40px;">-->
+                        <#--<span style="line-height: 50px;">SSN</span>-->
+                    <#--</a>-->
+                <#--</h2>-->
+            <#--</div>-->
+        <#--</div>-->
     </div>
-
     <hr>
 
     <footer>
