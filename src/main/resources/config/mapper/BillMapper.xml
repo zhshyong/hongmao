@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hongmao.dao.bill.BillDao">
+    <resultMap id="BaseResultMap" type="com.hongmao.dto.bill.BillDto">
+        <id column="id" property="id"/>
+        <id column="gameId" property="gameId"/>
+        <id column="userName" property="userName"/>
+        <id column="createTime" property="createTime"/>
+        <id column="updateTime" property="updateTime"/>
+        <id column="bet" property="bet"/>
+        <id column="amount" property="amount"/>
+        <id column="backAmount" property="backAmount"/>
+        <id column="odds" property="odds"/>
+        <id column="flag" property="flag"/>
+        <id column="status" property="status"/>
+        <id column="mark" property="mark"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+	    id,gameId,userName,createTime,updateTime,bet,amount,backAmount,flag,status,odds,mark
+    </sql>
+
+    <insert id="saveBill" parameterType="com.hongmao.dto.bill.BillDto">
+        INSERT INTO td_bill (gameId, userName, createTime, updateTime,bet, amount, backAmount, odds,
+         flag, status,mark)
+        VALUES
+            (#{gameId},#{userName}, NOW(), NOW(), #{bet},#{amount}, #{backAmount}, #{odds},
+             #{flag},#{status},#{mark})
+    </insert>
+
+</mapper>

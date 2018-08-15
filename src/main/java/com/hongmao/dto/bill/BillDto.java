@@ -16,9 +16,17 @@ public class BillDto {
 
     private String userName;
 
+    private Integer gameId;
+
     private String bet;
 
     private Integer amount;
+
+    /**
+     * 返回金额 计算为amount + amount*odds
+     * 向上取整
+     */
+    private Integer backAmount;
 
     private Integer flag;
 
